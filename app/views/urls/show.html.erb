@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Original url:</strong>
+  <%= @url.original_url %>
+</p>
+
+<p>
+  <strong>Short url:</strong>
+  <%= link_to("#{request.base_url}/#{@url.short_url}",{controller: 'urls', action: 'redirect_to_original_url', short_url: @url.short_url}, target: '_blank') %>
+</p>
+
+<%= link_to 'Back', new_url_path %>

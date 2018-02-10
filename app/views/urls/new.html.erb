@@ -1,0 +1,10 @@
+<% if current_user %>
+	<h1>Please enter the URL.</h1>
+
+	<%= render 'form' %>
+<%else%>
+	<div>
+	  <h1>Welcome!</h1>
+	  <p>Authenticate via Google Account to shorten your URL.</p>
+	</div>
+<%end%>
